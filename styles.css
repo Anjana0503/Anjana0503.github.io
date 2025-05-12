@@ -1,4 +1,4 @@
-/* styles.css */
+/* Improved styles.css */
 
 body {
     font-family: Arial, sans-serif;
@@ -16,7 +16,7 @@ header {
     margin: 0 auto;
     text-align: center;
     background-color: #dbe0b3;
-    width: 100%;              /* full width background */
+    width: 100%;
     padding: 40px 0;
 }
 
@@ -24,6 +24,9 @@ nav {
     background-color: #cdc5eb;
     width: 100%;
     padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -33,6 +36,7 @@ nav ul {
     gap: 20px;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -117,17 +121,21 @@ button:hover {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 .header-content {
-    max-width: 1000px;        /* centered content */
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 0 20px;   
+    padding: 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .header-content .text {
     flex: 1;
+    min-width: 250px;
 }
 
 .header-content .photo img {
@@ -157,4 +165,35 @@ button:hover {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 95%;
+        padding: 15px;
+    }
 }
