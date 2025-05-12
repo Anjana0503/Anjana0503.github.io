@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anjana Das Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="text">
+            <h1>Anjana Das</h1>
+            <p>B.Tech CSE Graduate (2024) | Passionate about Software Development & AI/ML</p>
+            <p><a href="mailto:danjana446@gmail.com">danjana446@gmail.com</a>   <a href="http://www.linkedin.com/in/anjana-das2002" target="_blank">LinkedIn</a>   <a href="https://github.com/Anjana0503" target="_blank">GitHub</a></p>
+            <a href="Anjana_Das_Resume.pdf" target="_blank" download>
+                <button>Download CV</button>
+            </a>
+            </div>
+            <div class="photo">
+                <img src="anjana-profile.jpg" alt="Anjana Das" />
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a Computer Science graduate (2024) from Techno India University with an 8.65 CGPA. I’m proficient in Java, Python, SQL, and passionate about contributing to innovative technology solutions, digital transformation, and enterprise application development.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Technical & Soft Skills</h2>
+        <ul>
+            <li>Programming: Java, Python, SQL, HTML, CSS, JavaScript</li>
+            <li>Tools: Linux, Android Studio, Git & GitHub, VS Code</li>
+            <li>Core: Data Structures & Algorithms, OOP, SDLC, OS</li>
+            <li>Soft Skills: Problem-solving, Leadership, Communication, Analytical Thinking, Teamwork, Time management, Adaptability</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <h3><a href="https://github.com/Anjana0503/Crop_Fertilizer_detection_using_ml.git" target="_blank">
+            AI/ML Crop & Fertilizer Recommendation System</a></h3>
+        <p>Built using Python, Scikit-learn, and NumPy, improving model performance by 20% through hyperparameter tuning. </p>
+
+        <h3><a href="https://github.com/Anjana0503/sangeeteishq.git" target="_blank">Sangeet-e-Ishq – Music Player App</a></h3>
+        <p>Developed in Android Studio with Java, featuring playlist creation, song queuing, and a custom equalizer.</p>
+    </section>
+    <section id="courses" class="courses">
+        <h2>Courses & Certifications</h2>
+        <ul>
+            <li>Crash Course on Python – Coursera (Nov 2022)</li>
+            <li>Google Data Analytics – Coursera (Oct 2023)</li>
+            <li>Google Advanced Data Analytics – Coursera (Nov 2023)</li>
+            <li>Introduction to Generative AI – Google Cloud (Feb 2025)</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <p>Your message has been sent!</p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>© 2025 Anjana Das. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
