@@ -1,3 +1,5 @@
+// Updated script.js for Formspree + popup feedback
+
 window.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
     const popup = document.getElementById('popup');
@@ -18,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 popupContent.textContent = "Your message has been sent!";
                 form.reset();
             } else {
-                popupContent.textContent = "Error sending message. Try again.";
+                popupContent.textContent = "There was a problem sending your message.";
             }
             popup.style.display = 'flex';
         })

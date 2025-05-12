@@ -1,11 +1,13 @@
-/* Improved styles.css */
+/* Modernized styles.css for Anjana's Portfolio */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
+    background: #f9fafb;
+    color: #111827;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,19 +15,26 @@ body {
 }
 
 header {
-    margin: 0 auto;
-    text-align: center;
-    background-color: #dbe0b3;
+    background: linear-gradient(to right, #1e3a8a, #3b82f6);
+    color: white;
     width: 100%;
-    padding: 40px 0;
+    padding: 60px 20px;
+    text-align: center;
+}
+nav {
+    /* stylelint-disable */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* for Safari */
+  background-color: rgba(255, 255, 255, 0.95); /* fallback */
 }
 
 nav {
-    background-color: #cdc5eb;
-    width: 100%;
-    padding: 15px;
     position: sticky;
     top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -33,7 +42,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 24px;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
@@ -41,80 +50,81 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #1e3a8a;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #007acc;
+    color: #3b82f6;
 }
 
 section {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     animation: fadeIn 1s ease forwards;
     opacity: 0;
 }
 
-section.about { background-color: #ffffcc; }
-section.skills { background-color: #fbb4ae; }
-section.projects { background-color: #decbe4; }
-section.courses { background-color: #fed9a6; }
-section.contact { background-color: #d9f0d3; }
-
-h1, h2, h3 {
-    margin-top: 0;
+h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
 }
 
 form input, form textarea {
     width: 100%;
-    margin: 8px 0;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
 form button {
-    background-color: #007acc;
+    background-color: #1e3a8a;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 1rem;
 }
 
 form button:hover {
-    background-color: #005f99;
+    background-color: #3b82f6;
 }
 
 footer {
-    background-color: #f0f0f0;
+    background-color: #f3f4f6;
     width: 100%;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    color: #4b5563;
 }
 
 button {
-    background-color: #007acc;
+    background-color: #1e3a8a;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 1rem;
 }
 
 button:hover {
-    background-color: #005f99;
+    background-color: #3b82f6;
 }
 
 @keyframes fadeIn {
@@ -127,10 +137,11 @@ button:hover {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     padding: 0 20px;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: left;
 }
 
 .header-content .text {
@@ -143,7 +154,8 @@ button:hover {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border: 4px solid white;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 }
 
 .popup {
@@ -153,7 +165,7 @@ button:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
     z-index: 9999;
@@ -164,20 +176,29 @@ button:hover {
     padding: 30px 40px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-card {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 20px;
-    transition: transform 0.2s;
 }
 
 .project-card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    padding-left: 0;
+    list-style: none;
 }
 
 @media (max-width: 768px) {
@@ -194,6 +215,6 @@ button:hover {
 
     section {
         width: 95%;
-        padding: 15px;
+        padding: 20px;
     }
 }
